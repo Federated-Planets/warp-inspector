@@ -8,7 +8,9 @@
   },
   "type": "module",
   "scripts": {
-    "inspect": "node inspector.js prime.federatedplanets.com"
+    "inspect": "node inspector.js prime.federatedplanets.com",
+    "release": "npm version patch -m \"Release v%s\"",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "federated-planets",
