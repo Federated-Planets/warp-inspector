@@ -1,6 +1,6 @@
 {
   "name": "@federated-planets/warp-inspector",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Federated Planets Configuration Validator",
   "main": "inspector.js",
   "bin": {
