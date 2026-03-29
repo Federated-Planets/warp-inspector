@@ -11,10 +11,16 @@ The **Warp Inspector** is a command-line utility for validating the configuratio
 
 ## Installation
 
+You can run the inspector directly without installing:
+
 ```bash
-cd warp-inspector
-npm install
-npm link # Optional: makes 'warp-inspector' command available globally
+npx @federated-planets/warp-inspector <url>
+```
+
+Or install it globally:
+
+```bash
+npm install -g @federated-planets/warp-inspector
 ```
 
 ## Usage
