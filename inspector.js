@@ -5,6 +5,13 @@ import * as cheerio from 'cheerio';
 import chalk from 'chalk';
 import { z } from 'zod';
 import crypto from 'crypto';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const pkg = JSON.parse(readFileSync(join(__dirname, 'package.json'), 'utf8'));
 
 const program = new Command();
 
@@ -36,7 +43,8 @@ async function inspect(target) {
     url = 'https://' + url;
   }
 
-  console.log(chalk.cyan(`\n🔭 Starting inspection for: ${chalk.bold(url)}`));
+  console.log(chalk.cyan(`\n🔭 Warp Inspector v${pkg.version}`));
+  console.log(chalk.cyan(`   Inspecting: ${chalk.bold(url)}`));
   console.log(chalk.dim('―'.repeat(50)));
 
   try {
@@ -122,7 +130,7 @@ async function inspect(target) {
 program
   .name('warp-inspector')
   .description('Validator tool for Federated Planets configuration')
-  .version('1.0.0')
+  .version(pkg.version)
   .argument('<target>', 'URL or domain of the planet to inspect')
   .action((target) => {
     inspect(target);
