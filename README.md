@@ -28,13 +28,14 @@ npm install -g @federated-planets/warp-inspector
 Pass a URL or domain to inspect a planet:
 
 ```bash
-warp-inspector federatedplanets.com
-warp-inspector http://localhost:3000
+warp-inspector prime.federatedplanets.com
+warp-inspector https://towel-42.federatedplanets.com/
 ```
 
 ## Protocol Compliance
 
 This tool validates compliance with:
+
 - **Core Spec:** [Federated Planets README](https://github.com/Federated-Planets/federated-planets)
 - **Travel Protocol:** [Space Travel Protocol](https://github.com/Federated-Planets/federated-planets/blob/main/TRAVEL.md)
 

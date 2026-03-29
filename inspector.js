@@ -40,8 +40,8 @@ async function inspect(target) {
   console.log(chalk.dim('―'.repeat(50)));
 
   try {
-    // 1. Fetch Homepage
-    process.stdout.write(chalk.white('📡 Fetching homepage... '));
+    // 1. Fetch Provided Page
+    process.stdout.write(chalk.white('📡 Fetching page... '));
     const response = await fetch(url);
     if (!response.ok) {
       console.log(chalk.red('FAILED'));
